@@ -1,0 +1,13 @@
+{
+  "name": "Coopboost",
+  "description": "Grow your Twitter audience.",
+  "repository": "https://github.com/lambtron/coopboost",
+  "website": "https://andyjiang.com",
+  "addons": ["mongolab:sandbox"],
+  "logo": "https://raw.githubusercontent.com/lambtron/coopboost/master/icon.png",
+  "keywords": ["twitter", "grow", "follow", "followers", "bot"],
+  "formation": [
+    { "process": "web", "quantity": 0, "size": "free"},
+    { "process": "clock", "quantity": 1, "size": "free"}
+  ]
+}

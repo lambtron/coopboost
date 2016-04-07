@@ -1,0 +1,27 @@
+{
+  "name": "heroku-cron-template",
+  "description": "Deploy a cron job to Heroku.",
+  "version": "0.1.0",
+  "author": "Andy Jiang",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lambtron/heroku-cron-template"
+  },
+  "engines": {
+    "node": "4.0.x",
+    "npm": "2.14.2"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "co": "^4.6.0",
+    "co-monk": "^1.0.0",
+    "cron": "^1.1.0",
+    "lodash": "^4.7.0",
+    "moment": "^2.12.0",
+    "mongodb": "^1.4.40",
+    "monk": "^1.0.1",
+    "thunkify-wrap": "^1.0.4",
+    "twitter": "^1.2.5"
+  }
+}
