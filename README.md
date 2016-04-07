@@ -23,12 +23,23 @@ $ heroku node ./tasks/add-seeds.js segment,keen_io,startupljackson
 
 And you're done!
 
+### BONUS
+
+If you want to add all the people you follow into a private list, go ahead and create one. After you do so, make sure to add the following variables into your Heroku environment variables:
+
+```
+TWITTER_SCREEN_NAME=andyjiang
+TWITTER_LIST_NAME=coopboost
+```
+
+The bot will then add all of the users it follows into the coopboost list. Twitter's API requires your handle, as well, which is why we also have to provide it here.
+
 ## How does it work?
 
 The cron job is in `./clock.js` and it determines when to initiate the `bot()`. Then, three things happen:
 
 - given a list of twitter users, add their followers to a data store
-- get the followers from the data store and follow them
+- get the followers from the data store and follow them (and mute them)
 - check the database for followers who haven't followed back within 30 days and unfollow them
 
 The cronjob in `./clock.js` is set to kick off this process each hour on the hour starting from 10am to 4pm pacific time. Feel free to update this to your liking. If you want to find out when your twitter followers are most active, check out this free tool, [Tweriod](http://www.tweriod.com/). If you need help constructing cronJobs, [check out this nifty tool](http://www.cronmaker.com/).
