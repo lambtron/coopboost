@@ -1,6 +1,8 @@
 
 # Coopboost
 
+![](http://i.imgur.com/oUeHn2v.gif)
+
 > Grow your twitter audience.
 
 ## Deploy
