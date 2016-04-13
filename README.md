@@ -13,9 +13,20 @@ First, [create a Twitter application](https://apps.twitter.com/) and grab the:
 - access token (you'll need to click "Create my access token")
 - access token secret
 
-Then, deploy below and provide the above tokens in the setup process.
+Then, deploy by clicking the below button.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?env[TWITTER_CONSUMER_KEY]=&env[TWITTER_CONSUMER_SECRET]=&env[TWITTER_ACCESS_TOKEN_KEY]=&env[TWITTER_ACCESS_TOKEN_SECRET])
+
+Add the above Twitter credentials to your Heroku app's environmental variables. You can do so by clicking on "manage app", then "settings", then "config variables".
+
+If you'd like to manage the environmental variables using [Heroku's CLI](https://toolbelt.heroku.com/), then be sure to clone the repo locally with the Git URL. Then you can run the following commands:
+
+```ssh
+$ heroku config:set TWITTER_CONSUMER_KEY=B9pthxxxx
+$ heroku config:set TWITTER_CONSUMER_SECRET=HhMXxxxx
+$ heroku config:set TWITTER_ACCESS_TOKEN_KEY=3629xxx
+$ heroku config:set TWITTER_ACCESS_TOKEN_SECRET=U3HQovsxxxx
+```
 
 Finally, seed your database with some Twitter accounts _whose followers you want_, i.e. Twitter accounts who are like you. (This bot will follow those accounts' followers with the intention that they'll look at your profile and follow you back.)
 
@@ -25,7 +36,7 @@ $ heroku node ./tasks/add-seeds.js segment,keen_io,startupljackson
 
 And you're done!
 
-### BONUS
+### BONUS: MUTING AND ADDING USERS TO A TWITTER LIST
 
 If you want to add all the people you follow into a private list, go ahead and create one. After you do so, make sure to add the following variables into your Heroku environment variables:
 
