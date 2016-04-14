@@ -31,7 +31,7 @@ $ heroku config:set TWITTER_ACCESS_TOKEN_SECRET=U3HQovsxxxx
 Finally, seed your database with some Twitter accounts _whose followers you want_, i.e. Twitter accounts who are like you. (This bot will follow those accounts' followers with the intention that they'll look at your profile and follow you back.)
 
 ```ssh
-$ heroku node ./tasks/add-seeds.js segment,keen_io,startupljackson
+$ heroku run node ./tasks/add-seeds.js segment,keen_io,startupljackson
 ```
 
 And you're done!
@@ -64,7 +64,7 @@ You can manually kick off tasks from the terminal.
 ### Seeding database with accounts whose followers you want
 
 ```ssh
-$ heroku node ./tasks/add-seeds.js segment,keen_io,startupljackson
+$ heroku run node ./tasks/add-seeds.js segment,keen_io,startupljackson
 ```
 
 The last parameter here are Twitter usernames delimited by commas. You can put as many as you want here. There are no notifications if all of these followers are added to the queue, so check back every once in a while to make sure the bot has followers to follow.
@@ -72,7 +72,7 @@ The last parameter here are Twitter usernames delimited by commas. You can put a
 ### Adding followers
 
 ```ssh
-$ heroku node ./tasks/add-followers.js
+$ heroku run node ./tasks/add-followers.js
 ```
 
 This will go through the database of seed accounts and add their followers to another database of accounts to follow.
@@ -80,7 +80,7 @@ This will go through the database of seed accounts and add their followers to an
 ### Following
 
 ```ssh
-$ heroku node ./tasks/follow.js
+$ heroku run node ./tasks/follow.js
 ```
 
 This will go through the database of accounts to follow and follow them.
@@ -88,7 +88,7 @@ This will go through the database of accounts to follow and follow them.
 ### Unfollowing
 
 ```ssh
-$ heroku node ./tasks/unfollow.js
+$ heroku run node ./tasks/unfollow.js
 ```
 
 This will go through the database of accounts, find the accounts that were followed, check if they've followed back, and if not, unfollow them.
