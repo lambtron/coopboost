@@ -15,7 +15,7 @@ First, [create a Twitter application](https://apps.twitter.com/) and grab the:
 
 Then, deploy by clicking the below button.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?env[TWITTER_CONSUMER_KEY]=&env[TWITTER_CONSUMER_SECRET]=&env[TWITTER_ACCESS_TOKEN_KEY]=&env[TWITTER_ACCESS_TOKEN_SECRET])
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/lambtron/coopboost&env[TWITTER_CONSUMER_KEY]=&env[TWITTER_CONSUMER_SECRET]=&env[TWITTER_ACCESS_TOKEN_KEY]=&env[TWITTER_ACCESS_TOKEN_SECRET])
 
 Add the above Twitter credentials to your Heroku app's environmental variables. You can do so by clicking on "manage app", then "settings", then "config variables".
 
