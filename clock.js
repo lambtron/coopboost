@@ -12,7 +12,7 @@ var co = require('co');
  */
 
 new CronJob({
-  cronTime: "0 0 12 1/1 * ? *", // daily at midnight
+  cronTime: "00 30 11 * * 1-5",
   onTick: co(bot()),
   start: true,
   timeZone: "America/Los_Angeles"
