@@ -3,9 +3,9 @@
  * Module dependencies.
  */
 
-var CronJob = require('cron').CronJob;
-var bot = require('./lib/bot');
-var co = require('co');
+const CronJob = require('cron').CronJob
+const bot = require('./lib/bot')
+const co = require('co')
 
 /**
  * Initiate Cronjob.

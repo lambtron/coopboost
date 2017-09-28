@@ -3,16 +3,17 @@
  * Module dependencies.
  */
 
-var tasks = require('../lib/tasks');
-var co = require('co');
+const tasks = require('../lib/tasks');
 
 /**
  * Unfollow.
  */
 
-co(function *() {
-  yield tasks.unfollow();
-  process.exit(0);
-});
+async function main() {
+  await tasks.unfollow()
+  process.exit(0)
+}
+
+main()
 
 // node ./tasks/unfollow.js

@@ -4,15 +4,16 @@
  */
 
 var tasks = require('../lib/tasks');
-var co = require('co');
 
 /**
  * Add followers.
  */
 
-co(function *() {
-  yield tasks.addFollowers();
-  process.exit(0);
-});
+async function main() {
+  await tasks.addFollowers()
+  process.exit(0)
+}
+
+main()
 
 // node ./tasks/add-followers.js
